@@ -35,6 +35,8 @@ ul {
   list-style: none;
 }
 
+/* --------------------------- Home Page --------------------------- */
+
 /* Header */
 header {
   display: flex;
@@ -217,7 +219,7 @@ header .navbar ul {
 
 .menulist {
   width: 100vw;
-  height: 80vh;
+  height: 90vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -271,7 +273,7 @@ header .navbar ul {
     justify-content: center;
     gap: 1rem;
   }
-  .menulist__dish {  
+  .menulist__dish {
     background-color: var(--lightgray-color);
     border-radius: 1rem;
     width: 100%;
@@ -282,7 +284,7 @@ header .navbar ul {
     cursor: pointer;
     gap: 1rem;
   }
-  .menulist__dish p{
+  .menulist__dish p {
     padding: 1rem;
   }
   .menulist__dish__text {
@@ -292,10 +294,182 @@ header .navbar ul {
     justify-content: center;
     gap: 0;
   }
-  
 }
 
-/* Fragments */
+/* --------------------------- Order Page --------------------------- */
+
+/* OrderMenu */
+.order {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.order__container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.order__image {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 50%;
+}
+
+.order__image img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 1rem;
+}
+
+.order__text {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.order__text h1 {
+  color: var(--yellow-color);
+  font-size: 2.5rem;
+}
+
+@media (min-width: 960px) {
+  .order {
+    height: 60vh;
+  }
+  .order__container {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+  .order__image {
+    width: 100%;
+    height: 75%;
+  }
+  .order__text {
+    gap: 0.5rem;
+  }
+  .order__text p {
+    width: 80%;
+  }
+}
+
+/* OrderForm */
+
+.orderform {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.orderform__container {
+  border-radius: 1rem;
+  background-color: var(--palepink-color);
+  width: 70%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  gap: 0.5rem;
+}
+
+label {
+  font-weight: 600;
+  min-width: 100%;
+  text-align: center;
+}
+
+input,
+select {
+  background-color: var(--white-color);
+  font-weight: 600;
+  width: 9rem;
+  padding: 0.5rem;
+  border-radius: 1rem;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.exception {
+  margin: 2rem;
+  height: 2rem;
+  min-width: 90%;
+  background-color: var(--lightgray-color);
+  color: var(--black-color);
+  cursor: pointer;
+}
+
+.exception:hover {
+  background-color: var(--gray-color);
+  color: var(--white-color);
+}
+
+@media (min-width: 960px) {
+  .orderform {
+    width: 100vw;
+    height: 80vh;
+  }
+  .orderform__container {
+    width: 50%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  label {
+    font-weight: 600;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  input,
+  select {
+    background-color: var(--white-color);
+    font-weight: 600;
+    width: 20rem;
+    padding: 0.3rem;
+    border-radius: 1rem;
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .exception {
+    margin: 2rem;
+    height: 2rem;
+    min-width: 100%;
+    background-color: var(--lightgray-color);
+    color: var(--black-color);
+    cursor: pointer;
+  }
+}
+/* --------------------------- Fragments  --------------------------- */
 .button {
   background-color: var(--lightgray-color);
   color: var(--gray-color);
@@ -319,4 +493,9 @@ header .navbar ul {
 .active {
   background-color: var(--gray-color);
   color: var(--white-color);
+}
+
+.link {
+  background-color: inherit;
+  color: var(--black-color);
 }

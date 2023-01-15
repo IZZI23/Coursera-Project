@@ -1,7 +1,6 @@
 import React from "react";
 import salad from "../assets/salad.jpg";
 import pasta from "../assets/pasta.jpg";
-import fish from "../assets/fish.jpg";
 
 function HomeMenuList() {
   return (

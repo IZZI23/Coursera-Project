@@ -1,6 +1,7 @@
 import React from "react";
 import homepage from "../assets/homepage.jpg";
 import YellowButton from "../fragmental comp/YellowButton";
+import { Link } from "react-router-dom";
 
 function Homebar() {
   return (
@@ -19,7 +20,9 @@ function Homebar() {
           </p>
           <img src={homepage} alt="" />
         </div>
-        <YellowButton>Reserve a Table</YellowButton>
+        <Link to={'/order'}>
+          <YellowButton>Reserve a Table</YellowButton>
+        </Link>
       </div>
     </section>
   );
