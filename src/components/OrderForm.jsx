@@ -1,20 +1,24 @@
 import React, { useState } from "react";
 
-function OrderForm() {
+function OrderForm( {availableTimes,setAvailableTimes}) {
   const [date, setDate] = useState("");
-  const [time, setTime] = useState("17:00");
   const [numbers, setNumbers] = useState("1");
   const [occasions, setOccasions] = useState("Meeting");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setDate("");
-    setTime("");
+    setAvailableTimes("");
     setNumbers("");
     setOccasions("");
     console.log("form submitted");
   };
 
+  console.log(date);
+  console.log(availableTimes);
+  console.log(numbers);
+  console.log(occasions);
+  
   
   return (
     <section className="orderform">
@@ -29,9 +33,9 @@ function OrderForm() {
           />
           <label htmlFor="time">Choose time</label>
           <select
-            id="time "
-            value={time}
-            onChange={(event) => setTime(event.target.value)}
+            id="time"
+            value={availableTimes}
+            onChange={(event) => setAvailableTimes(event.target.value)}
           >
             <option>17:00</option>
             <option>18:00</option>
